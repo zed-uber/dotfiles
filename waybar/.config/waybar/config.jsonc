@@ -1,8 +1,8 @@
 {
 	"layer": "top",
 	"modules-left": ["custom/launcher","hyprland/workspaces","hyprland/window"],
-	"modules-center": ["clock"],
-	"modules-right": ["backlight","custom/bluelight","pulseaudio","power-profiles-daemon" ,"battery","tray","custom/power"],
+	"modules-center": [],
+	"modules-right": ["pulseaudio","tray","clock"],
 	
 	"pulseaudio": {
 		"tooltip": true,
@@ -112,8 +112,8 @@
     },
     "custom/launcher":{
         "format": " ",
-        "on-click": "~/.config/rofi/launchers/type-2/launcher.sh",
-        "on-click-right": "killall rofi"
+        "on-click": "wofi --show=drun",
+        "on-click-right": "killall wofi"
     },
     "custom/power":{
         "format": " ",
