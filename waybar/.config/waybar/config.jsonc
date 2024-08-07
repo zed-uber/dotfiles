@@ -2,121 +2,137 @@
   "layer": "top",
   "output": "DP-3",
   "position": "top",
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
-  "modules-center": [],
-  "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
+  "margin-bottom": 0,
 
-  "pulseaudio": {
-    "tooltip": true,
-    "scroll-step": 5,
-    "format": "{icon}  {volume}%",
-    "format-muted": "🔇Muted",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "format-icons": {
-      "muted": ["🔇"],
-      "default": ["", "", ""]
-    }
+  "modules-left": ["clock", "hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
+  "custom/cmus": {
+    "format": "󰎈 {}",
+    //"max-length": 15,
+    "interval": 10,
+    "exec": "~/.config/waybar/scripts/cmus",
+    "return-type": "json",
+    "exec-if": "pgrep cmus",
+    "on-click": "cmus-remote -u",
+    "on-scroll-up": "cmus-remote --next",
+    "on-scroll-down": "cmus-remote --prev",
+    "escape": true
   },
-  "hyprland/window": {
-    "format": "{title}",
-    "max-length": 80,
+  "custom/changebg": {
+    "format": "switch  ",
+    "on-click": "~/.config/waybar/scripts/wallpaper",
     "tooltip": false
   },
-  "hyprland/workspaces": {
-    "num-tags": 6
-  },
-  "network": {
-    "tooltip": true,
-    "format-wifi": "  {essid}",
-    "format-ethernet": "",
-    "on-click": "alacritty -e nmtui"
-  },
-  "backlight": {
-    "tooltip": false,
-    "format": " {}%",
-    "interval": 1,
-    "on-scroll-up": "brigthnessctl set +5%",
-    "on-scroll-down": "brigthnessctl set 5%-"
-  },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 20
-    },
-    "format": "{icon}  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
-  },
   "tray": {
-    "icon-size": 18,
+    "icon-size": 24,
     "spacing": 10
   },
-  "clock": {
-    "format": "{:%a %d-%b %H:%M}",
-    "format-alt": "{:%d/%m/%Y %A}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b>{}</b></span>"
-      }
-    }
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "(\\d\\. )?(.*) Brave": "<span color=\"#d19a66\">󰊯 Brave</span>",
+      "Brave (.*)": "<span color=\"#d19a66\">󰊯</span>",
+      "Brave": "<span color=\"#d19a66\">󰊯 Brave</span>",
+      "(\\d\\. )?(.*) OBS": "<span color=\"#2bbac5\">󰕧 OBS</span>",
+      "OBS (.*)": "<span color=\"#2bbac5\">󰕧</span>",
+      "OBS": "<span color=\"#2bbac5\">󰕧 OBS</span>",
+      "(\\d\\. )?(.*) foot": "<span color=\"#e5c07b\">󰽒 Foot</span>",
+      "foot (.*)": "<span color=\"#e5c07b\">󰽒</span>",
+      "foot": "<span color=\"#e5c07b\">󰽒 Foot</span>",
+      "(\\d\\. )?(.*) nvim": "<span color=\"#89ca78\"> Neovim</span>",
+      "nvim (.*)": "<span color=\"#89ca78\"> </span>",
+      "nvim": "<span color=\"#89ca78\"> Neovim</span>",
+      "(\\d\\. )?(.*) vim": "<span color=\"#89ca78\"> Vim</span>",
+      "vim (.*)": "<span color=\"#89ca78\"> Vim</span>",
+      "vim": "<span color=\"#89ca78\"> Vim</span>",
+      "(\\d\\. )?(.*) Mozilla Firefox": "<span color=\"#f97583\">󰈹 Firefox</span>",
+      "Mozilla Firefox (.*)": "<span color=\"#f97583\">󰈹 Firefox</span>",
+      "Mozilla Firefox": "<span color=\"#f97583\">󰈹 Firefox</span>",
+      "(\\d\\. )?(.*) Google Chrome": "<span color=\"#89ca78\"> Google Chrome</span>",
+      "Google Chrome (.*)": "<span color=\"#89ca78\"> Google Chrome</span ",
+      "Google Chrome": "<span color=\"#89ca78\"> Google Chrome</span>"
+    },
+    "separate-outputs": false
   },
-  "power-profiles-daemon": {
+  "hyprland/workspaces": {
     "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
     "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
+      // "1": "󰲠",
+      // "2": "󰲢",
+      // "3": "󰲤",
+      // "4": "󰲦",
+      // "5": "󰲨",
+      // "6": "󰲪",
+      // "7": "󰲬",
+      // "8": "󰲮",
+      // "9": "󰲰",
+      // "10": "󰿬",
+      // "-99": "",
+      "active": "",
+      "default": ""
+    },
+    "persistent_workspaces": {
+      "1": ["HDMI-A-1"],
+      "2": ["HDMI-A-1"],
+      "3": ["HDMI-A-1"],
+      "4": ["DP-1"],
+      "5": ["DP-1"],
+      "6": ["DP-1"]
+      // "7": ["DP-1"],
+      // "8": ["DP-1"],
+      // "9": ["DP-1"],
+      // "10": ["DP-1"]
     }
   },
-  "cpu": {
-    "interval": 15,
-    "format": " {}%",
-    "max-length": 10
+  "network": {
+    "interface": "enp5s0",
+    "tooltip-format-ethernet": "{ifname} ",
+    "interval": 2,
+    "format": " {bandwidthDownBits}  {bandwidthUpBits}"
+  },
+  "temperature": {
+    "format": "{icon} {temperatureC}°C",
+    "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+    "critical-threshold": 80,
+    "format-icons": ["", "", ""]
   },
   "memory": {
-    "interval": 30,
-    "format": " {}%",
-    "max-length": 10
+    "format": "󰍛 {}%",
+    "tooltip": "false"
   },
-  "custom/media": {
-    "interval": 30,
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 20,
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": "false"
+  },
+  "custom/powermenu": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "exec wlogout -p layer-shell"
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
     "format-icons": {
-      "spotify": " ",
-      "default": " "
+      "headphone": "󰋎",
+      "default": ["", ""]
     },
-    "escape": true,
-    "exec": "$home/.config/system_scripts/mediaplayer.py 2> /dev/null",
-    "on-click": "playerctl play-pause"
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
   },
-  "custom/launcher": {
-    "format": " ",
-    "on-click": "wofi --show=drun",
-    "on-click-right": "killall wofi"
+  "custom/weather": {
+    //shows the current weather and forecast
+    "tooltip": true,
+    "format": "{}",
+    "interval": 30,
+    "exec": "~/.config/waybar/scripts/weather",
+    "return-type": "json"
   },
-  "custom/power": {
-    "format": " ",
-    "on-click": "bash ~/.config/rofi/powermenu/type-2/powermenu.sh"
-  },
-  "custom/updates": {
-    "format": "{} update(s)",
-    "exec": "checkupdates | wc -l",
-    "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
-    "interval": 15,
-    "on-click": "alacritty -e paru -syu && notify-send 'the system has been updated' "
-  },
-  "custom/wallpaper": {
-    "format": " ",
-    "on-click": "bash ~/.config/system_scripts/pkill_bc"
+  "clock": {
+    "timezone": "America/Sao_Paulo",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "<span size='14pt' font_weight='bold'>{:%H:%M}</span>",
+    "format-alt": "<span size='14pt' font_weight='bold'>{:%d/%m/%Y}</span>"
   }
 }
