@@ -1,4 +1,4 @@
-@import "./rose-pine.css";
+@import "mocha.css";
 
 * {
   border: none;
@@ -9,7 +9,8 @@
 }
 
 #waybar {
-  background: rgba(24, 24, 37, 0.8);
+  background-color: shade(@base, 0.9);
+  border: 2px solid alpha(@crust, 0.3);
   color: @text;
   font-size: 16px;
   font-family: "JetBrainsMono Nerd Font Mono";
@@ -25,18 +26,18 @@
 
 #workspaces button {
   padding: 0 5px;
-  color: @text;
+  color: @maroon;
   background: none;
 }
 
 #workspaces button:hover {
-  color: @love;
+  color: @maroon;
 }
 
 /* Fix: active workspace doesn't show up */
 /* #workspaces button.focused { */
 #workspaces button.active {
-  color: @love;
+  color: @maroon;
 }
 
 #custom-powermenu,

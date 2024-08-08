@@ -51,7 +51,10 @@
       "Mozilla Firefox": "<span color=\"#f97583\">󰈹 Firefox</span>",
       "(\\d\\. )?(.*) Google Chrome": "<span color=\"#89ca78\"> Google Chrome</span>",
       "Google Chrome (.*)": "<span color=\"#89ca78\"> Google Chrome</span ",
-      "Google Chrome": "<span color=\"#89ca78\"> Google Chrome</span>"
+      "Google Chrome": "<span color=\"#89ca78\"> Google Chrome</span>",
+      "(\\d\\. )?(.*) Code - OSS": "<span color=\"#89B4FA\">󰨞 Code</span>",
+      "Code - OSS (.*)": "<span color=\"#89B4FA\">󰨞 Code</span>",
+      "Code - OSS": "<span color=\"#89B4FA\">󰨞 Code</span>"
     },
     "separate-outputs": false
   },
