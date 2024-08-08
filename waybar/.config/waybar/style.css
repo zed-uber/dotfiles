@@ -9,7 +9,7 @@
 }
 
 #waybar {
-  background: rgba(25, 23, 36, 0.8);
+  background: rgba(24, 24, 37, 0.8);
   color: @text;
   font-size: 16px;
   font-family: "JetBrainsMono Nerd Font Mono";
@@ -62,30 +62,30 @@
 }
 
 #custom-powermenu {
-  color: @love;
+  color: @text;
   padding-right: 11px;
 }
 
 #pulseaudio {
-  color: @foam;
+  color: @text;
   padding-right: 14px;
 }
 
 #cpu {
-  color: @pine;
+  color: @text;
 }
 
 #temperature {
-  color: @love;
+  color: @text;
 }
 
 #memory {
-  color: @rose;
+  color: @text;
 }
 
 #network {
-  color: @iris;
-  min-width: 200px;
+  color: @text;
+  min-width: 190px;
 }
 
 #clock {
