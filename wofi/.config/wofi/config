@@ -1,0 +1,15 @@
+# CSS style sheet to use
+style=~/.config/wofi/style.css
+
+# Dimensions
+width=25% #default 50
+height=30% #default 40
+
+# Launch location offset - defaults are 0
+# Commented out values will launch wofi in the center
+# uncommented values are x,y coords with 0, 0 in the top left
+#xoffset=0
+#yoffset=0
+
+# Prompt
+prompt=launcher
