@@ -1,0 +1,76 @@
+/* ::root{ */
+/*     --accent: #5291e2; */
+/*     --dark:   #383C4A; */
+/*     --light:  #7C818C; */
+/*     --ld:     #404552; */
+/*     --dl:     #4B5162 */
+/*     --white:  white; */
+/* } */
+
+*{
+    font-family: JetBrainsMono Nerd Font Mono;
+    font-size: 1.02em;
+  }
+  
+  window{
+    background-image: linear-gradient(to bottom, #33ccffee, #00ff99ee);
+    opacity: 0.8;
+  }
+  
+  #input {
+    margin: 5px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 3px solid grey;
+    background-color: rgba(25, 23, 36, 0.8);
+    color: white;
+    font-size: 2em;
+  }
+  
+  /* search icon */
+  #input:first-child > :nth-child(1) {
+    min-height: 1.25em;
+    min-width: 1.25em;
+    background-image: -gtk-icontheme('open-menu-symbolic');
+  }
+  
+  /* clear icon */
+  #input:first-child > :nth-child(4){
+    min-height: 1.25em;
+    min-width: 1.25em;
+    background-image: -gtk-icontheme('window-close-symbolic');
+  }
+  
+  #inner-box {
+    background-color: rgba(25, 23, 36, 0.8);
+  }
+  
+  #outer-box {
+  
+    margin: 2px;
+    padding:0px;
+    background-color: rgba(25, 23, 36, 0.8);
+  }
+  
+  #text {
+    padding: 5px;
+    color: white;
+  }
+  
+  #entry:selected {
+    background-color: #5291e2;
+  }
+  
+  #text:selected {
+  }
+  
+  #scroll {
+  }
+  
+  #img {
+  }
+  
+  /* Give color to even items */
+  /* #entry:nth-child(even){ */
+  /*     background-color: #404552; */
+  /* } */
