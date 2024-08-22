@@ -1,4 +1,9 @@
+#function k --wraps=kubectl --description 'alias k=kubectl'
+#  kubectl $argv
+#        
+#end
+
 function k --wraps=kubectl --description 'alias k=kubectl'
-  kubectl $argv
-        
+    kubecolor $argv
+
 end
