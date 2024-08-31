@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Start Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1e1e2e; /* Catppuccin Mocha base */
+        color: #cdd6f4; /* Catppuccin Mocha text */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .search-container {
+        margin-bottom: 2rem;
+      }
+      #search-bar {
+        width: 300px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #313244; /* Catppuccin Mocha surface0 */
+        color: #cdd6f4; /* Catppuccin Mocha text */
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .grid-item {
+        background-color: #45475a; /* Catppuccin Mocha surface1 */
+        border-radius: 5px;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: #cdd6f4; /* Catppuccin Mocha text */
+        transition: background-color 0.3s;
+      }
+      .grid-item:hover {
+        background-color: #585b70; /* Catppuccin Mocha surface2 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-container">
+      <form action="https://www.google.com/search" method="get">
+        <input
+          type="text"
+          id="search-bar"
+          name="q"
+          placeholder="Search Google..."
+        />
+      </form>
+    </div>
+    <div class="grid-container">
+      <a href="https://www.example1.com" class="grid-item">Link 1</a>
+      <a href="https://www.example2.com" class="grid-item">Link 2</a>
+      <a href="https://www.example3.com" class="grid-item">Link 3</a>
+      <a href="https://www.example4.com" class="grid-item">Link 4</a>
+      <a href="https://www.example5.com" class="grid-item">Link 5</a>
+      <a href="https://www.example6.com" class="grid-item">Link 6</a>
+      <a href="https://www.example7.com" class="grid-item">Link 7</a>
+      <a href="https://www.example8.com" class="grid-item">Link 8</a>
+    </div>
+  </body>
+</html>
