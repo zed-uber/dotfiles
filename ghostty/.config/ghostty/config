@@ -4,7 +4,7 @@ command = /usr/bin/fish --login --interactive
 # Themes
 theme = catppuccin-mocha
 gtk-titlebar = false
-shell-integration = fish
+#shell-integration = fish
 background-opacity = 0.95
 
 # Fonts
@@ -13,8 +13,8 @@ font-size = 12
 cursor-style = block
 
 # Keybinds - Panes/Splits
-keybind = ctrl+s>\=new_split:right
-keybind = ctrl+s>-=new_split:down
+keybind = ctrl+s>n=new_split:right
+keybind = ctrl+s>m=new_split:down
 keybind = ctrl+s>x=close_surface
 
 # Keybinds - Split Navigation
@@ -24,8 +24,8 @@ keybind = ctrl+s>k=goto_split:top
 keybind = ctrl+s>l=goto_split:right
 
 # Keybinds - Tab Management
-keybind = ctrl+shift+left=previous_tab
-keybind = ctrl+shift+right=next_tab
+keybind = ctrl+s>left=previous_tab
+keybind = ctrl+s>right=next_tab
 keybind = ctrl+s>c=new_tab
 
 # Keybinds - Tab Switching
