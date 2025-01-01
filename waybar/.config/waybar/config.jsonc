@@ -6,7 +6,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "clock"],
+  "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
   "custom/cmus": {
     "format": "󰎈 {}",
     //"max-length": 15,
@@ -133,9 +133,9 @@
     "return-type": "json"
   },
   "clock": {
-    "timezone": "America/Chicago",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "<span size='14pt' font_weight='bold'>{:%H:%M}</span>",
-    "format-alt": "<span size='14pt' font_weight='bold'>{:%d/%m/%Y}</span>"
+      "interval": 60,
+      "tooltip": true,
+      "format": "{:%r}",
+      "tooltip-format": "{:%A, %b %d %Y}",
   }
 }
