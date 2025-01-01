@@ -1,0 +1,70 @@
+@import "mocha.css";
+
+*{
+    font-family: Hack;
+    font-size: 1.02em;
+  }
+  
+  window{
+    background-image: linear-gradient(to bottom, var(--sapphire), var(--green));
+    border: 2px solid var(--sapphire);
+    opacity: 0.95;
+  }
+  
+  #input {
+    margin: 5px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 3px solid var(--surface);
+    background-color: var(--base);
+    color: var(--text);
+    font-size: 2em;
+  }
+  
+  /* search icon */
+  #input:first-child > :nth-child(1) {
+    min-height: 1.25em;
+    min-width: 1.25em;
+    background-image: -gtk-icontheme('open-menu-symbolic');
+  }
+  
+  /* clear icon */
+  #input:first-child > :nth-child(4){
+    min-height: 1.25em;
+    min-width: 1.25em;
+    background-image: -gtk-icontheme('window-close-symbolic');
+  }
+  
+  #inner-box {
+    background-color: var(--base);
+  }
+  
+  #outer-box {
+  
+    margin: 2px;
+    padding:0px;
+    background-color: var(--base);
+  }
+  
+  #text {
+    padding: 5px;
+    color: var(--test);
+  }
+  
+  #entry:selected {
+    background-color: var(--peach);
+  }
+  
+  #text:selected {
+    color: var(--green);
+  }
+
+  image {
+    margin-left: .25em;
+    margin-right: .25em;
+  }
+
+  /* Give color to even items */
+  /* #entry:nth-child(even){ */
+  /*     background-color: #404552; */
+  /* } */

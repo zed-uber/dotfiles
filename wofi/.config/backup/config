@@ -2,7 +2,7 @@
 mode=drun
 
 # Icon Images
-allow_images=false
+allow_images=true
 image_size=18
 
 # CSS style sheet to use
