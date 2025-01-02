@@ -2,32 +2,36 @@
 
 * {
   border: none;
-  border-radius: 0;
+  border-radius: 6px;
   min-height: 0;
-  margin: 0;
+  margin-left: 0px;
+  margin-right: 0px;
   padding: 0;
 }
 
 #waybar {
-  background-color: shade(@base, 0.9);
-  border: 2px solid alpha(@crust, 0.3);
+  background-color: shade(@base, 1.0);
+  border: 2px solid @crust;
   color: @text;
   font-size: 16px;
   font-family: "Hack";
 }
 
 .modules-left {
-  margin-left: 8px;
+  margin: 4px;
 }
 
 .modules-right {
-  margin-right: 8px;
+  margin: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 #workspaces button {
-  padding: 0 5px;
   color: @maroon;
-  background: none;
+  background-color: shade(@base, 1.0);
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 #workspaces button:hover {
@@ -53,44 +57,53 @@
 #pulseaudio,
 #tray,
 #network {
-  padding: 4px 8px;
-  border-radius: 30px;
-  margin: 6px 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #window {
   color: @text;
+  background-color: shade(@crust, 1.0);
 }
 
 #custom-powermenu {
   color: @text;
   padding-right: 11px;
+  background-color: shade(@crust, 1.0);
 }
 
 #pulseaudio {
   color: @text;
   padding-right: 14px;
+  background-color: shade(@crust, 1.0);
 }
 
 #cpu {
   color: @text;
+  background-color: shade(@crust, 1.0);
 }
 
 #temperature {
   color: @text;
+  background-color: shade(@crust, 1.0);
 }
 
 #memory {
   color: @text;
+  background-color: shade(@crust, 1.0);
 }
 
 #network {
   color: @text;
   min-width: 190px;
+  background-color: shade(@crust, 1.0);
 }
 
 #clock {
   color: @text;
+  background-color: shade(@crust, 1.0);
   /* opacity: 0.7; */
   /* font-size: 18px; */
 }
