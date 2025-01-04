@@ -65,7 +65,7 @@
 
 #window {
   color: @text;
-  background-color: shade(@crust, 1.0);
+  background-color: shade(@base, 1.0);
 }
 
 #custom-powermenu {
