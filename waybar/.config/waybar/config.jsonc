@@ -6,7 +6,7 @@
 
   "modules-left": ["custom/launcher","hyprland/workspaces","custom/spacer","hyprland/window"],
   "modules-center": [],
-  "modules-right": ["pulseaudio", "network", "cpu", "memory", "custom/spacer", "custom/weather", "clock"],
+  "modules-right": ["network", "cpu", "memory", "custom/spacer", "pulseaudio", "custom/weather", "clock"],
   "tray": {
     "icon-size": 24,
     "spacing": 10
@@ -46,11 +46,11 @@
     "format-icons": ["", "", ""]
   },
   "memory": {
-    "format": "󰍛 {}%",
+    "format": " {}%",
     "tooltip": "false"
   },
   "cpu": {
-    "format": " {usage}%",
+    "format": " {usage}%",
     "tooltip": "false"
   },
   "custom/powermenu": {

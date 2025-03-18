@@ -7,28 +7,37 @@
 }
 
 #waybar {
-  background-color: @base;
+  background-color: @mantle;
 }
 
 #custom-launcher {
   font-size: 26px;
   color: @sapphire;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: .5em;
+  padding-right: .5em;
   border-radius: 4px;
-  background: @base;
-  border-bottom: 2px @mantle;
+  background: @mantle;
+  border-bottom: 2px @base;
 }
 
-#cpu {
-  margin-left: 8px;
-  margin-right: 8px;
+#network {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   color: @text;
 }
 
-#memory,
-#battery,
-#backlight,
+#cpu {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  color: @text;
+}
+
+#memory {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  color: @text;
+}
+
 #temperature {
   margin-left: 8px;
   margin-right: 8px;
@@ -79,12 +88,6 @@
   color: @test;
 }
 
-#clock {
-  margin-left: 16px;
-  margin-right: 16px;
-  color: @teal;
-}
-
 #tray {
   margin-left: 8px;
   margin-right: 8px;
@@ -105,9 +108,41 @@
 
 #custom-spacer {
   margin-left: .5em;
-  margin-right: .75em;
+  margin-right: .5em;
   color: @peach;
   font-size: 28px;
+  font-weight: bold;
+}
+
+#pulseaudio {
+  background-color: @surface0;
+  border-radius: 10px;
+  border: 1px solid @overlay0;
+  padding-left: 0.5em;
+  padding-right: 1em;
+  margin-left: .25em;
+  margin-right: .25em;  
+}
+
+#custom-weather {
+  background-color: @surface0;
+  border-radius: 10px;
+  border: 1px solid @overlay0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+#clock {
+  background-color: @surface0;
+  border-radius: 10px;
+  border: 1px solid @overlay0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  color: @teal;
   font-weight: bold;
 }
 
