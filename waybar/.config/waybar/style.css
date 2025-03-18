@@ -2,108 +2,117 @@
 
 * {
   border: none;
-  border-radius: 6px;
-  min-height: 0;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding: 0;
+  font-family: "Hack";
+  font-size: 16px;
 }
 
 #waybar {
-  background-color: shade(@base, 1.0);
-  border: 2px solid @crust;
-  color: @text;
-  font-size: 16px;
-  font-family: "Hack";
+  background-color: @base;
 }
 
-.modules-left {
-  margin: 4px;
-}
-
-.modules-right {
-  margin: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-
-#workspaces button {
-  color: @maroon;
-  background-color: shade(@base, 1.0);
-  margin-left: 4px;
-  margin-right: 4px;
-}
-
-#workspaces button:hover {
-  color: @maroon;
-}
-
-/* Fix: active workspace doesn't show up */
-/* #workspaces button.focused { */
-#workspaces button.active {
-  color: @maroon;
-}
-
-#custom-powermenu,
-#cpu,
-#custom-weather,
-#temperature,
-#memory,
-#workspaces,
-#custom-changebg,
-#custom-cmus,
-#clock,
-#window,
-#pulseaudio,
-#tray,
-#network {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#window {
-  color: @text;
-  background-color: shade(@base, 1.0);
-}
-
-#custom-powermenu {
-  color: @text;
-  padding-right: 11px;
-  background-color: shade(@crust, 1.0);
-}
-
-#pulseaudio {
-  color: @text;
-  padding-right: 14px;
-  background-color: shade(@crust, 1.0);
+#custom-launcher {
+  font-size: 26px;
+  color: @sapphire;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  background: @base;
+  border-bottom: 2px @mantle;
 }
 
 #cpu {
+  margin-left: 8px;
+  margin-right: 8px;
   color: @text;
-  background-color: shade(@crust, 1.0);
 }
 
+#memory,
+#battery,
+#backlight,
 #temperature {
+  margin-left: 8px;
+  margin-right: 8px;
   color: @text;
-  background-color: shade(@crust, 1.0);
 }
 
-#memory {
-  color: @text;
-  background-color: shade(@crust, 1.0);
+#pulseaudio {
+  color: @green;
+  margin-left: 8px;
 }
 
-#network {
+#temperature.critical {
+  color: @red;
+}
+
+#window {
+  font-weight: bold;
+}
+
+#workspaces {
+  background-color: @surface0;
+  border-radius: 8px;
+  border: 1px solid @overlay0;
+  margin-left: 1em;
+}
+
+#workspaces button {
+  padding: 0 0.5em;
+  margin: 0.25em;
   color: @text;
-  min-width: 190px;
-  background-color: shade(@crust, 1.0);
+}
+
+#workspaces button.empty {
+  color: @overlay0;
+}
+
+#workspaces button.visible {
+  color: @blue;
+}
+
+#workspaces button.active {
+  color: @sapphire;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  border-radius: 1em;
+  color: @test;
 }
 
 #clock {
+  margin-left: 16px;
+  margin-right: 16px;
+  color: @teal;
+}
+
+#tray {
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 10px;
+  border-radius: 50%;
+  background: @base;
+}
+
+#custom-power {
+  font-size: 18px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 6px;
+  border-radius: 50%;
   color: @text;
-  background-color: shade(@crust, 1.0);
-  /* opacity: 0.7; */
-  /* font-size: 18px; */
+  background: @red;
+}
+
+#custom-spacer {
+  margin-left: .5em;
+  margin-right: .75em;
+  color: @peach;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  to {
+    color: @text;
+  }
 }
