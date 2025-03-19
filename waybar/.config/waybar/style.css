@@ -3,7 +3,7 @@
 * {
   border: none;
   font-family: "Hack";
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #waybar {
@@ -13,10 +13,9 @@
 #custom-launcher {
   font-size: 26px;
   color: @sapphire;
-  padding-left: .5em;
+  padding-left: .75em;
   padding-right: .5em;
-  border-radius: 4px;
-  background: @mantle;
+  background: @crust;
 }
 
 #network {
