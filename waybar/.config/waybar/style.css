@@ -7,7 +7,7 @@
 }
 
 #waybar {
-  background-color: @mantle;
+  background-color: @crust;
 }
 
 #custom-launcher {
@@ -17,7 +17,6 @@
   padding-right: .5em;
   border-radius: 4px;
   background: @mantle;
-  border-bottom: 2px @base;
 }
 
 #network {
@@ -58,7 +57,7 @@
 }
 
 #workspaces {
-  background-color: @surface0;
+  background-color: @base;
   border-radius: 8px;
   border: 1px solid @overlay0;
   margin-left: 1em;
@@ -115,7 +114,7 @@
 }
 
 #pulseaudio {
-  background-color: @surface0;
+  background-color: @base;
   border-radius: 10px;
   border: 1px solid @overlay0;
   padding-left: 0.5em;
@@ -125,7 +124,7 @@
 }
 
 #custom-weather {
-  background-color: @surface0;
+  background-color: @base;
   border-radius: 10px;
   border: 1px solid @overlay0;
   padding-left: 0.5em;
@@ -135,7 +134,7 @@
 }
 
 #clock {
-  background-color: @surface0;
+  background-color: @base;
   border-radius: 10px;
   border: 1px solid @overlay0;
   padding-left: 0.5em;
