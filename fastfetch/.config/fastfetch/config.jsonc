@@ -3,6 +3,10 @@
 	"logo": {},
     "modules": [
         "os",
+        "host",
+        "kernel",
+        "processes",
+        "packages",
         "cpu",
         "memory",
         "GPU",
