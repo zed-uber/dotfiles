@@ -6,7 +6,7 @@
 
   "modules-left": ["custom/launcher","hyprland/workspaces","custom/spacer","hyprland/window"],
   "modules-center": [],
-  "modules-right": ["network", "cpu", "memory", "custom/spacer", "pulseaudio", "custom/weather", "clock"],
+  "modules-right": ["network", "cpu", "memory", "custom/spacer", "custom/audio-sink", "custom/weather", "clock"],
   "tray": {
     "icon-size": 24,
     "spacing": 10
@@ -60,16 +60,18 @@
     "tooltip": false,
     "on-click": "exec wlogout -p layer-shell"
   },
-  "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon}",
-    "format-muted": "",
-    "format-icons": {
-      "headphone": "󰋎",
-      "default": ["", ""]
-    },
-    "scroll-step": 1,
-    "on-click": "pavucontrol"
+  "custom/audio-sink": {
+    "format": "{}",
+    "exec": "python3 ${HOME}/.config/waybar/scripts/audio-sink.py",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "python3 ${HOME}/.config/waybar/scripts/audio-sink.py click",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+    "max-length": 500,
+    "tooltip": true,
+    "tooltip-format": "Click to cycle audio outputs"
   },
   "custom/weather": {
       "exec": "${HOME}/.config/waybar/scripts/get_weather.sh 45.151466,-93.410908",
