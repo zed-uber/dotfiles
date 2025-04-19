@@ -4,16 +4,29 @@
   "position": "top",
   "margin-bottom": 0,
 
-  "modules-left": ["custom/launcher","hyprland/workspaces","custom/spacer","hyprland/window"],
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "custom/spacer",
+    "hyprland/window",
+  ],
   "modules-center": [],
-  "modules-right": ["network", "cpu", "memory", "custom/spacer", "custom/audio-sink", "custom/weather", "clock"],
+  "modules-right": [
+    "network",
+    "cpu",
+    "memory",
+    "custom/spacer",
+    "custom/audio-sink",
+    "custom/weather",
+    "clock",
+  ],
   "tray": {
     "icon-size": 24,
-    "spacing": 10
+    "spacing": 10,
   },
   "hyprland/window": {
     "format": "{}",
-    "separate-outputs": true
+    "separate-outputs": true,
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -23,42 +36,42 @@
       "3": "󰢹",
       "4": "󰺷",
       "5": "󱓶",
-      "6": "󰆟",
+      "6": "",
       "7": "󰆟",
       "8": "8",
       "9": "9",
-      "10": "10"
+      "10": "10",
     },
     "persistent_workspaces": {
-      "DP-3": [ 1, 2, 3, 4, 5, 6, 7 ],
-      "HDMI-A-1": [ 9 ],
-      "DP-2": [ 10 ]
-    }
+      "DP-3": [1, 2, 3, 4, 5, 6, 7],
+      "HDMI-A-1": [9],
+      "DP-2": [10],
+    },
   },
   "network": {
     "interface": "wlan0",
     "tooltip-format-ethernet": "{ifname} ",
     "interval": 2,
-    "format": " {bandwidthDownBits}  {bandwidthUpBits}"
+    "format": " {bandwidthDownBits}  {bandwidthUpBits}",
   },
   "temperature": {
     "format": "{icon} {temperatureC}°C",
     "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
     "critical-threshold": 80,
-    "format-icons": ["", "", ""]
+    "format-icons": ["", "", ""],
   },
   "memory": {
     "format": " {}%",
-    "tooltip": "false"
+    "tooltip": "false",
   },
   "cpu": {
     "format": " {usage}%",
-    "tooltip": "false"
+    "tooltip": "false",
   },
   "custom/powermenu": {
     "format": "",
     "tooltip": false,
-    "on-click": "exec wlogout -p layer-shell"
+    "on-click": "exec wlogout -p layer-shell",
   },
   "custom/audio-sink": {
     "format": "{}",
@@ -71,28 +84,28 @@
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
     "max-length": 500,
     "tooltip": true,
-    "tooltip-format": "Click to cycle audio outputs"
+    "tooltip-format": "Click to cycle audio outputs",
   },
   "custom/weather": {
-      "exec": "${HOME}/.config/waybar/scripts/get_weather.sh 45.151466,-93.410908",
-      "return-type": "json",
-      "format": "{}",
-      "tooltip": true,
-      "interval": 3600
+    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh 45.151466,-93.410908",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600,
   },
   "clock": {
-      "interval": 60,
-      "tooltip": true,
-      "format": "{:%r}",
-      "tooltip-format": "{:%A, %b %d %Y}",
+    "interval": 60,
+    "tooltip": true,
+    "format": "{:%r}",
+    "tooltip-format": "{:%A, %b %d %Y}",
   },
-  "custom/launcher":{
+  "custom/launcher": {
     "format": "",
     "on-click": "wofi",
-    "tooltip": false
+    "tooltip": false,
   },
-  "custom/spacer":{
+  "custom/spacer": {
     "format": "",
-    "icon-size": 24
-  }
+    "icon-size": 24,
+  },
 }
