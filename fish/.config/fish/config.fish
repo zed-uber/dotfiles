@@ -7,7 +7,7 @@ set -gx VISUAL nvim
 set -gx TERM kitty
 
 function fish_greeting
-    echo ""
-    echo ""
-    fastfetch
+    #echo ""
+    #echo ""
+    #fastfetch
 end
